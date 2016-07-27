@@ -1,22 +1,12 @@
-# Flight Stats API for Laravel
+# FlightStats API for Laravel
 
-Пакет для работы с flightstats.com
+Package for flightstats.com
 
-- Зависимости
+## Install
 
-Какое либо описание захуярить тут.
-
-## Version
-1.0
-
-## Installation
-
-Чтобы установить проект выполните команду ниже.
 ```sh
-composer require "lartie/flightstatsapi"
+composer require "lartie/flight-stats-api"
 ```
-
-Затем вам нужно добавить класс в app.php файл:
 
 ```php
     'providers' => [
@@ -25,8 +15,7 @@ composer require "lartie/flightstatsapi"
     ]
 ```
 
-
-## API Methods
+## Usage
 
 ### Airports
 
@@ -69,4 +58,10 @@ composer require "lartie/flightstatsapi"
 * array arrivals($airport)
 * array departures($airport)
 
+### Schedules
+
+* array departingFrom($airport, $year, $month, $day, $hour, $params = [])
+* array arrivingTo($airport, $year, $month, $day, $hour, $params = [])
+
 # License
+MIT

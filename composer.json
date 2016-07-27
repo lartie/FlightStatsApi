@@ -1,0 +1,23 @@
+{
+    "name": "lartie/flight-stats-api",
+    "description": "FlightStats API for Laravel",
+    "keywords": [
+        "flight", "flightstats", "laravel", "api"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Artie",
+            "email": "log.wil.log@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "laravel/framework": "5.2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "LArtie\\FlightStatsApi\\": "src/"
+        }
+    }}

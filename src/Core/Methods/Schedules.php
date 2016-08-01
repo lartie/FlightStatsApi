@@ -22,7 +22,7 @@ final class Schedules extends BaseMethod
     protected $objectKey = 'scheduledFlights';
 
     /**
-     * @var
+     * @var string
      */
     protected $objectClassName = ScheduledFlight::class;
 
@@ -33,7 +33,7 @@ final class Schedules extends BaseMethod
      * @param $day
      * @param $hour
      * @param array $data
-     * @return mixed|string
+     * @return ScheduledFlight[]
      */
     public function departingFrom($airport, $year, $month, $day, $hour, $data = [])
     {
@@ -49,7 +49,7 @@ final class Schedules extends BaseMethod
      * @param $day
      * @param $hour
      * @param array $data
-     * @return mixed|string
+     * @return ScheduledFlight[]
      */
     public function arrivingTo($airport, $year, $month, $day, $hour, $data = [])
     {

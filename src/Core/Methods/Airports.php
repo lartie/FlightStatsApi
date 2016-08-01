@@ -24,7 +24,7 @@ final class Airports extends BaseMethod
     protected $objectKey = 'airports';
 
     /**
-     * @var
+     * @var string
      */
     protected $objectClassName = Airport::class;
 
@@ -32,7 +32,7 @@ final class Airports extends BaseMethod
      * Returns a listing of all airports, including those that are not currently active
      *
      * @param array $data
-     * @return mixed|string
+     * @return Airport[]
      */
     public function all($data = [])
     {
@@ -45,7 +45,7 @@ final class Airports extends BaseMethod
      * @param null $year
      * @param null $month
      * @param null $day
-     * @return mixed|string
+     * @return Airport[]
      */
     public function active($year = null, $month = null, $day = null)
     {
@@ -61,7 +61,7 @@ final class Airports extends BaseMethod
      * @param null $year
      * @param null $month
      * @param null $day
-     * @return mixed|string
+     * @return Airport[]
      */
     public function airportCode($code, $year = null, $month = null, $day = null)
     {
@@ -78,7 +78,7 @@ final class Airports extends BaseMethod
      * Returns a listing of airports that have had the given city code
      *
      * @param $cityCode
-     * @return mixed|string
+     * @return Airport[]
      */
     public function cityCode($cityCode)
     {
@@ -89,7 +89,7 @@ final class Airports extends BaseMethod
      * Returns a listing of airports that have had the given country code
      *
      * @param $countryCode
-     * @return mixed|string
+     * @return Airport[]
      */
     public function countryCode($countryCode)
     {
@@ -100,7 +100,7 @@ final class Airports extends BaseMethod
      * Returns the airport with the given FlightStats code, a globally unique code across time
      *
      * @param $code
-     * @return mixed|string
+     * @return Airport[]
      */
     public function fs($code)
     {
@@ -114,7 +114,7 @@ final class Airports extends BaseMethod
      * @param null $year
      * @param null $month
      * @param null $day
-     * @return mixed|string
+     * @return Airport[]
      */
     public function iata($iataCode, $year = null, $month = null, $day = null)
     {
@@ -130,7 +130,7 @@ final class Airports extends BaseMethod
      * @param null $year
      * @param null $month
      * @param null $day
-     * @return mixed|string
+     * @return Airport[]
      */
     public function icao($icaoCode, $year = null, $month = null, $day = null)
     {
@@ -145,7 +145,7 @@ final class Airports extends BaseMethod
      * @param $longitude
      * @param $latitude
      * @param $radiusMiles
-     * @return mixed|string
+     * @return Airport[]
      * @throws Exception
      */
     public function withinRadius($longitude, $latitude, $radiusMiles)

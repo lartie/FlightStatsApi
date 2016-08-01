@@ -23,7 +23,7 @@ final class Equipment extends BaseMethod
     protected $objectKey = 'equipment';
 
     /**
-     * @var
+     * @var string
      */
     protected $objectClassName = EquipmentObject::class;
 
@@ -31,7 +31,7 @@ final class Equipment extends BaseMethod
      * Returns all equipment reference data.
      *
      * @param array $data
-     * @return mixed|string
+     * @return array
      */
     public function all($data = [])
     {
@@ -43,7 +43,7 @@ final class Equipment extends BaseMethod
      *
      * @param $code
      * @param array $data
-     * @return mixed|string
+     * @return array
      */
     public function iata($code, $data = [])
     {

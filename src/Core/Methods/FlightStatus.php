@@ -32,6 +32,11 @@ final class FlightStatus extends BaseMethod
     protected $objectClassName = StatusFlight::class;
 
     /**
+     * @var string
+     */
+    protected $version = 'v2';
+
+    /**
      * Returns the Flight Status associated with provided Flight ID.
      * The Flight ID is an arbitrary number that FlightStats uses to uniquely identify flights.
      *

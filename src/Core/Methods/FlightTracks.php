@@ -39,6 +39,11 @@ final class FlightTracks extends BaseMethod
     protected $objectClassName = TrackFlight::class;
 
     /**
+     * @var string
+     */
+    protected $version = 'v2';
+
+    /**
      * Returns the positional track for a specific flight, specified by flight ID.
      * Flight plan may be optionally included.
      * To narrow down to only the freshest data, you may optionally limit the age (in minutes) and/or number of positions returned.

@@ -24,7 +24,7 @@ final class FlightStatus extends BaseMethod
     /**
      * @var string
      */
-    protected $objectKey = 'flightStatus';
+    protected $objectKey = 'flightStatuses';
 
     /**
      * @var string
@@ -80,7 +80,7 @@ final class FlightStatus extends BaseMethod
      * @param $month
      * @param $day
      * @param array $data
-     * @return array
+     * @return StatusFlight[]
      */
     public function departingOnDate($carrier, $flight, $year, $month, $day, $data = [])
     {

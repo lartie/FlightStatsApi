@@ -33,7 +33,7 @@ class CallbackEvents
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getType()
     {
@@ -41,7 +41,7 @@ class CallbackEvents
     }
 
     /**
-     * @param mixed $type
+     * @param string $type
      */
     public function setType($type)
     {

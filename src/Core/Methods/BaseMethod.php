@@ -145,7 +145,7 @@ abstract class BaseMethod
     /**
      * @param $method
      * @param array $data
-     * @return mixed|string
+     * @return array
      * @throws FlightStatsException
      */
     final protected function get($method, $data = [])

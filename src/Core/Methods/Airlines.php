@@ -24,14 +24,14 @@ final class Airlines extends BaseMethod
     protected $objectKey = 'airlines';
 
     /**
-     * @var
+     * @var string
      */
     protected $objectClassName = Airline::class;
 
     /**
      * Returns a listing of all airlines, including those that are not currently active
      * @param array $data
-     * @return mixed|string
+     * @return Airline[]
      */
     public function all($data = [])
     {
@@ -45,8 +45,7 @@ final class Airlines extends BaseMethod
      * @param null $month Month (1 to 12)
      * @param null $day Day of month
      * @param array $data
-     * @return bool
-     * @throws \Exception
+     * @return Airline[]
      */
     public function active($year = null, $month = null, $day = null, $data = [])
     {
@@ -58,7 +57,7 @@ final class Airlines extends BaseMethod
      *
      * @param $code
      * @param array $data
-     * @return mixed|string
+     * @return Airline[]
      */
     public function fs($code, $data = [])
     {
@@ -73,8 +72,7 @@ final class Airlines extends BaseMethod
      * @param null $month
      * @param null $day
      * @param array $data
-     * @return mixed|string
-     * @throws \Exception
+     * @return Airline[]
      */
     public function iata($iataCode, $year = null, $month = null, $day = null, $data = [])
     {
@@ -89,8 +87,7 @@ final class Airlines extends BaseMethod
      * @param null $month
      * @param null $day
      * @param array $data
-     * @return mixed|string
-     * @throws \Exception
+     * @return Airline[]
      */
     public function icao($icaoCode, $year = null, $month = null, $day = null, $data = [])
     {

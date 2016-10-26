@@ -4,7 +4,7 @@ namespace LArtie\FlightStatsApi\Core\Objects;
 
 /**
  * Class StatusFlight
- * @package LArtie\FlightStatsApi\Core\Objects
+ * @package LArtie\FlightStatsApi\Models\Objects
  */
 final class StatusFlight extends BaseObject
 {
@@ -66,6 +66,11 @@ final class StatusFlight extends BaseObject
     /**
      * @var object
      */
+    protected $delays;
+
+    /**
+     * @var object
+     */
     protected $flightDurations;
 
     /**
@@ -76,12 +81,17 @@ final class StatusFlight extends BaseObject
     /**
      * @var object
      */
+    protected $flightStatusUpdates;
+
+    /**
+     * @var object
+     */
     protected $flightEquipment;
 
     /**
      * @return int
      */
-    public function getFlightId(): int
+    public function getFlightId()
     {
         return $this->flightId;
     }
@@ -97,7 +107,7 @@ final class StatusFlight extends BaseObject
     /**
      * @return string
      */
-    public function getCarrierFsCode(): string
+    public function getCarrierFsCode()
     {
         return $this->carrierFsCode;
     }
@@ -113,7 +123,7 @@ final class StatusFlight extends BaseObject
     /**
      * @return int
      */
-    public function getFlightNumber(): int
+    public function getFlightNumber()
     {
         return $this->flightNumber;
     }
@@ -129,7 +139,7 @@ final class StatusFlight extends BaseObject
     /**
      * @return string
      */
-    public function getDepartureAirportFsCode(): string
+    public function getDepartureAirportFsCode()
     {
         return $this->departureAirportFsCode;
     }
@@ -145,7 +155,7 @@ final class StatusFlight extends BaseObject
     /**
      * @return string
      */
-    public function getArrivalAirportFsCode(): string
+    public function getArrivalAirportFsCode()
     {
         return $this->arrivalAirportFsCode;
     }
@@ -161,7 +171,7 @@ final class StatusFlight extends BaseObject
     /**
      * @return object
      */
-    public function getDepartureDate(): object
+    public function getDepartureDate()
     {
         return $this->departureDate;
     }
@@ -177,7 +187,7 @@ final class StatusFlight extends BaseObject
     /**
      * @return object
      */
-    public function getArrivalDate(): object
+    public function getArrivalDate()
     {
         return $this->arrivalDate;
     }
@@ -209,7 +219,7 @@ final class StatusFlight extends BaseObject
     /**
      * @return object
      */
-    public function getSchedule(): object
+    public function getSchedule()
     {
         return $this->schedule;
     }
@@ -225,7 +235,7 @@ final class StatusFlight extends BaseObject
     /**
      * @return object
      */
-    public function getOperationalTimes(): object
+    public function getOperationalTimes()
     {
         return $this->operationalTimes;
     }
@@ -241,7 +251,7 @@ final class StatusFlight extends BaseObject
     /**
      * @return array
      */
-    public function getCodeshares(): array
+    public function getCodeshares()
     {
         return $this->codeshares;
     }
@@ -257,7 +267,23 @@ final class StatusFlight extends BaseObject
     /**
      * @return object
      */
-    public function getFlightDurations(): object
+    public function getDelays()
+    {
+        return $this->delays;
+    }
+
+    /**
+     * @param object $delays
+     */
+    public function setDelays(array $delays)
+    {
+        $this->delays = $delays;
+    }
+
+    /**
+     * @return object
+     */
+    public function getFlightDurations()
     {
         return $this->flightDurations;
     }
@@ -273,7 +299,7 @@ final class StatusFlight extends BaseObject
     /**
      * @return object
      */
-    public function getAirportResources(): object
+    public function getAirportResources()
     {
         return $this->airportResources;
     }
@@ -289,7 +315,23 @@ final class StatusFlight extends BaseObject
     /**
      * @return object
      */
-    public function getFlightEquipment(): object
+    public function getFlightStatusUpdates()
+    {
+        return $this->flightStatusUpdates;
+    }
+
+    /**
+     * @param object $flightStatusUpdates
+     */
+    public function setFlightStatusUpdates(object $flightStatusUpdates)
+    {
+        $this->flightStatusUpdates = $flightStatusUpdates;
+    }
+
+    /**
+     * @return object
+     */
+    public function getFlightEquipment()
     {
         return $this->flightEquipment;
     }

@@ -11,7 +11,7 @@ use LArtie\FlightStatsApi\Core\Objects\StatusFlight;
  * departure until roughly seven days after arrival.
  *
  * Class FlightStatus
- * @package LArtie\FlightStatsApi\Core\Methods
+ * @package LArtie\FlightStatsApi\Models\Methods
  *
  */
 final class FlightStatus extends BaseMethod
@@ -80,7 +80,7 @@ final class FlightStatus extends BaseMethod
      * @param $month
      * @param $day
      * @param array $data
-     * @return StatusFlight[]
+     * @return array
      */
     public function departingOnDate($carrier, $flight, $year, $month, $day, $data = [])
     {

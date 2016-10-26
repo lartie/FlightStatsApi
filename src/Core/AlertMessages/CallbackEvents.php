@@ -4,7 +4,7 @@ namespace LArtie\FlightStatsApi\Core\AlertMessages;
 
 /**
  * Class CallbackEvents
- * @package LArtie\FlightStatsApi\Core\AlertMessages
+ * @package LArtie\FlightStatsApi\Models\AlertMessages
  */
 class CallbackEvents
 {

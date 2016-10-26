@@ -19,7 +19,7 @@ use LArtie\FlightStatsApi\Core\Objects\TrackFlight;
  * return both derived and raw in the same payload.
  *
  * Class FlightTracks
- * @package LArtie\FlightStatsApi\Core\Methods
+ * @package LArtie\FlightStatsApi\Models\Methods
  */
 final class FlightTracks extends BaseMethod
 {

@@ -4,7 +4,7 @@ namespace LArtie\FlightStatsApi\Core\Objects;
 
 /**
  * Class BaseObject
- * @package LArtie\FlightStatsApi\Core\Objects
+ * @package LArtie\FlightStatsApi\Models\Objects
  */
 class BaseObject
 {

@@ -2,11 +2,13 @@
 
 namespace LArtie\FlightStatsApi\Core\AlertMessages;
 
+use Illuminate\Support\Facades\Log;
 use LArtie\FlightStatsApi\Core\Objects\AlertRule;
+use LArtie\FlightStatsApi\Core\Objects\StatusFlight;
 
 /**
  * Class CallbackFields
- * @package LArtie\FlightStatsApi\Core\AlertMessages
+ * @package LArtie\FlightStatsApi\Models\AlertMessages
  * @link https://developer.flightstats.com/api-docs/alerts/v1/alertsCallback
  *
  * Alert Messages are produced when an existing alert rule is triggered, and delivered to the destination specified by the rule.
@@ -18,7 +20,7 @@ use LArtie\FlightStatsApi\Core\Objects\AlertRule;
  * @property object $dataSource The source of the data from which the event was detected.
  * @property string $dateTimeRecorded The UTC date and time of the event in ISO-8601 format. yyyy-MM-dd'T'HH:mm:ss.SSSZ
  * @property AlertRule $rule The Alert Rule that was triggered.
- * @property object $flightStatus The Flight Status that triggered the rule.
+ * @property StatusFlight $flightStatus The Flight Status that triggered the rule.
  */
 class CallbackFields
 {
@@ -29,10 +31,13 @@ class CallbackFields
     public function __construct($alert)
     {
         $this->event = new CallbackEvents($alert->event);
+
+        Log::info(var_export($alert->event, true));
+        
         $this->dataSource = $alert->dataSource;
         $this->dateTimeRecorded = $alert->dateTimeRecorded;
         $this->rule = new AlertRule($alert->rule);
-        $this->flightStatus = $alert->flightStatus;
+        $this->flightStatus = new StatusFlight($alert->flightStatus);
     }
 
     /**
@@ -46,7 +51,7 @@ class CallbackFields
     /**
      * @param CallbackEvents $event
      */
-    public function setEvent($event)
+    public function setEvent(CallbackEvents $event)
     {
         $this->event = $event;
     }
@@ -62,7 +67,7 @@ class CallbackFields
     /**
      * @param AlertRule $rule
      */
-    public function setRule($rule)
+    public function setRule(AlertRule $rule)
     {
         $this->rule = $rule;
     }
@@ -100,7 +105,7 @@ class CallbackFields
     }
 
     /**
-     * @return object
+     * @return StatusFlight
      */
     public function getFlightStatus()
     {
@@ -108,9 +113,9 @@ class CallbackFields
     }
 
     /**
-     * @param object $flightStatus
+     * @param StatusFlight $flightStatus
      */
-    public function setFlightStatus($flightStatus)
+    public function setFlightStatus(StatusFlight $flightStatus)
     {
         $this->flightStatus = $flightStatus;
     }

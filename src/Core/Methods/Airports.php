@@ -2,7 +2,6 @@
 
 namespace LArtie\FlightStatsApi\Core\Methods;
 
-use Exception;
 use LArtie\FlightStatsApi\Core\Exceptions\FlightStatsException;
 use LArtie\FlightStatsApi\Core\Objects\Airport;
 

@@ -2,7 +2,6 @@
 
 namespace LArtie\FlightStatsApi\Core\Methods;
 
-use Exception;
 use GuzzleHttp\Client;
 use LArtie\FlightStatsApi\Core\Exceptions\FlightStatsException;
 

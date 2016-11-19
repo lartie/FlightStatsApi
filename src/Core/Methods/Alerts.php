@@ -1,6 +1,7 @@
 <?php
 
 namespace LArtie\FlightStatsApi\Core\Methods;
+
 use LArtie\FlightStatsApi\Core\Objects\AlertRule;
 
 /**
@@ -16,10 +17,10 @@ final class Alerts extends BaseMethod
     /**
      * @var array
      */
-    private $objectKeys = ['rule', 'alertCapabilities', 'appendix'];
+    protected $objectKeys = ['rule', 'alertCapabilities', 'appendix'];
 
     /**
-     * @var
+     * @var string
      */
     protected $objectClassName = AlertRule::class;
 
@@ -177,7 +178,7 @@ final class Alerts extends BaseMethod
      * @param $deliverTo
      * @param string $type
      * @param array $data
-     * @return mixed|string
+     * @return array
      */
     public function test($carrier, $flightNumber, $departureAirport, $arrivalAirport, $deliverTo, $type = 'json', $data = [])
     {
@@ -191,7 +192,7 @@ final class Alerts extends BaseMethod
 
     /**
      * @param $content
-     * @return array
+     * @return AlertRule
      */
     protected function jsonToObject($content)
     {

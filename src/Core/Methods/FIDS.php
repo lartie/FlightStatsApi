@@ -48,24 +48,25 @@ final class FIDS extends BaseMethod
      */
     protected $baseMethod = 'fids';
 
-
     /**
      * @var string
      */
     protected $objectKey = 'fids';
 
     /**
-     * @var
+     * @var string
      */
     protected $objectClassName = FIDSObject::class;
 
-    /** @var array */
+    /**
+     * @var array
+     */
     private $parameters = [];
 
     /**
      *
      * @param $airport
-     * @return mixed|string
+     * @return array
      */
     public function departures($airport)
     {
@@ -74,7 +75,7 @@ final class FIDS extends BaseMethod
 
     /**
      * @param $airport
-     * @return mixed|string
+     * @return array
      */
     public function arrivals($airport)
     {

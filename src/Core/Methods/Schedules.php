@@ -1,13 +1,12 @@
 <?php
 
 namespace LArtie\FlightStatsApi\Core\Methods;
+
 use LArtie\FlightStatsApi\Core\Objects\ScheduledFlight;
 
 /**
  *
  * Class Schedules
- *
- *
  */
 final class Schedules extends BaseMethod
 {

@@ -2,7 +2,7 @@
 
 namespace LArtie\FlightStatsApi\Core\Methods;
 
-use Exception;
+use LArtie\FlightStatsApi\Core\Exceptions\FlightStatsException;
 use LArtie\FlightStatsApi\Core\Objects\Airport;
 
 /**
@@ -146,12 +146,12 @@ final class Airports extends BaseMethod
      * @param $latitude
      * @param $radiusMiles
      * @return Airport[]
-     * @throws Exception
+     * @throws FlightStatsException
      */
     public function withinRadius($longitude, $latitude, $radiusMiles)
     {
         if (!isset($longitude, $latitude, $radiusMiles)) {
-            throw new Exception('Поля longitude, latitude, radiusMiles должны быть заполнены полностью или отсутствовать вообще.');
+            throw new FlightStatsException('Поля longitude, latitude, radiusMiles должны быть заполнены полностью или отсутствовать вообще.');
         }
 
         $method = "withinRadius/{$longitude}/{$latitude}/{$radiusMiles}";

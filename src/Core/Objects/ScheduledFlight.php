@@ -4,7 +4,7 @@ namespace LArtie\FlightStatsApi\Core\Objects;
 
 /**
  * Class ScheduledFlight
- * @package LArtie\FlightStatsApi\Core\Objects
+ * @package LArtie\FlightStatsApi\Models\Objects
  */
 final class ScheduledFlight extends BaseObject
 {
@@ -87,6 +87,11 @@ final class ScheduledFlight extends BaseObject
      * @var
      */
     public $wetleaseOperatorFsCode;
+
+    /**
+     * @var
+     */
+    public $departureTerminal;
 
     /**
      * @var
@@ -363,5 +368,21 @@ final class ScheduledFlight extends BaseObject
     public function setWetleaseOperatorFsCode($wetleaseOperatorFsCode)
     {
         $this->wetleaseOperatorFsCode = $wetleaseOperatorFsCode;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDepartureTerminal()
+    {
+        return $this->departureTerminal;
+    }
+
+    /**
+     * @param mixed $departureTerminal
+     */
+    public function setDepartureTerminal($departureTerminal)
+    {
+        $this->departureTerminal = $departureTerminal;
     }
 }

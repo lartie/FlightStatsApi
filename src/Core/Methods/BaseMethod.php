@@ -2,7 +2,6 @@
 
 namespace LArtie\FlightStatsApi\Core\Methods;
 
-use Exception;
 use GuzzleHttp\Client;
 use LArtie\FlightStatsApi\Core\Exceptions\FlightStatsException;
 
@@ -126,14 +125,14 @@ abstract class BaseMethod
      * @param $month
      * @param $day
      * @return string
-     * @throws Exception
+     * @throws FlightStatsException
      */
     final protected function buildMethodViaDate($method, $year, $month, $day)
     {
         if (!is_null($year) or !is_null($month) or !is_null($day)) {
 
             if (!isset($year, $month, $day)) {
-                throw new Exception('Поля year, month, day должны быть заполнены полностью или отсутствовать вообще.');
+                throw new FlightStatsException('Поля year, month, day должны быть заполнены полностью или отсутствовать вообще.');
             }
 
             $method .= "/{$year}/{$month}/{$day}";

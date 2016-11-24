@@ -14,13 +14,6 @@ Package for flightstats.com
 composer require "lartie/flight-stats-api"
 ```
 
-```php
-'providers' => [
-    ...
-    \LArtie\FlightStatsApi\FlightStatsApiServiceProvider::class, 
-]
-```
-
 ## Usage
 
 ### Airports

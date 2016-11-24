@@ -1,6 +1,6 @@
 {
     "name": "lartie/flight-stats-api",
-    "description": "FlightStats API for Laravel",
+    "description": "FlightStats API",
     "keywords": [
         "flight", "flightstats", "laravel", "api"
     ],
@@ -13,8 +13,7 @@
         }
     ],
     "require": {
-        "php": ">=7.0.9",
-        "laravel/framework": "5.2.*"
+        "php": ">=7.0.9"
     },
     "autoload": {
         "psr-4": {
